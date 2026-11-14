@@ -1,6 +1,6 @@
-# 🔴 레드버튼(Red Button) — 보드게임 카페 매장 운영 시스템 클론 및 고도화
+# 매장 운영 시스템 — 고객 태블릿·매장 관리·본사 관리를 한 Next.js 앱으로
 
-보드게임 카페 프랜차이즈 "레드버튼"의 통합 매장 운영 시스템.
+보드게임 카페 프랜차이즈 매장에서 쓰는 앱을 분석해, 고객·매장·본사 세 역할의 통합 운영 시스템으로 다시 만들었습니다.
 고객용 태블릿 앱, 매장 관리자, 본사 관리자를 하나의 Next.js 앱으로 구현합니다.
 
 ## 기술 스택
@@ -411,7 +411,7 @@ npm run dev
 ### 환경 변수
 
 ```env
-DATABASE_URL="mysql://root:root@localhost:3306/redbutton"
+DATABASE_URL="mysql://root:root@localhost:3306/storeops"
 SESSION_SECRET="your-secret-key"
 ```
 
