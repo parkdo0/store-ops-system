@@ -32,9 +32,14 @@ interface SessionPayload extends JWTPayload {
 // ──────────────────────────────────────
 
 const COOKIE_NAME = "rb-session";
-const SECRET = new TextEncoder().encode(
-  process.env.SESSION_SECRET || "redbutton-default-secret-change-in-production-2024"
-);
+// 비밀값은 환경변수로만 받는다. 없으면 세션을 만들거나 검증하지 않고 멈춘다(공개 저장소라 기본값을 두지 않음).
+function getSecret(): Uint8Array {
+  const secret = process.env.SESSION_SECRET;
+  if (!secret) {
+    throw new Error("SESSION_SECRET 환경변수가 없습니다.");
+  }
+  return new TextEncoder().encode(secret);
+}
 const EXPIRY = "16h"; // 16시간 (영업시간 기준)
 
 // ──────────────────────────────────────
@@ -46,7 +51,7 @@ export async function createSession(data: SessionData): Promise<string> {
     .setProtectedHeader({ alg: "HS256" })
     .setExpirationTime(EXPIRY)
     .setIssuedAt()
-    .sign(SECRET);
+    .sign(getSecret());
 
   const cookieStore = await cookies();
   cookieStore.set(COOKIE_NAME, token, {
@@ -70,7 +75,7 @@ export async function getSession(): Promise<SessionData | null> {
     const token = cookieStore.get(COOKIE_NAME)?.value;
     if (!token) return null;
 
-    const { payload } = await jwtVerify(token, SECRET);
+    const { payload } = await jwtVerify(token, getSecret());
     return (payload as SessionPayload).session ?? null;
   } catch {
     return null;
@@ -93,7 +98,7 @@ export async function destroySession(): Promise<void> {
 
 export async function verifySessionFromToken(token: string): Promise<SessionData | null> {
   try {
-    const { payload } = await jwtVerify(token, SECRET);
+    const { payload } = await jwtVerify(token, getSecret());
     return (payload as SessionPayload).session ?? null;
   } catch {
     return null;
