@@ -481,7 +481,7 @@ async function main() {
   console.log("\n10. Creating coupons...");
   const couponsData = [
     { code: "WELCOME", name: "신규 회원 1,000원 할인", discountAmount: 1000, minOrderAmount: 5000, maxUses: 1000 },
-    { code: "WELCOME", name: "출석 쿠폰 500원", discountAmount: 500, minOrderAmount: 0, maxUses: null },
+    { code: "ATTEND500", name: "출석 쿠폰 500원", discountAmount: 500, minOrderAmount: 0, maxUses: null },
     { code: "BOARDGAME", name: "보드게임 데이 2,000원 할인", discountAmount: 2000, minOrderAmount: 10000, maxUses: 200, startDate: new Date("2025-01-01"), endDate: new Date("2025-12-31") },
   ];
   for (const c of couponsData) {
