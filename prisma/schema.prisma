@@ -1,5 +1,5 @@
 // ============================================
-// 레드버튼(RedButton) 태블릿 앱 클론 - DB 스키마 v4
+// 매장 운영 시스템 - DB 스키마 v4
 // Stack: Prisma 7 + MySQL 8
 // 본사(HQ) + 매장(Store) 2계층 관리 구조
 // + 로그인/인증 시스템
@@ -55,7 +55,7 @@ model Store {
   name         String   @db.VarChar(100) // "수원점"
   address      String?  @db.VarChar(255)
   phone        String?  @db.VarChar(20)
-  wifiId       String?  @db.VarChar(50)  // "redbutton"
+  wifiId       String?  @db.VarChar(50)  // "storeops"
   wifiPw       String?  @db.VarChar(50)  // "red2563799"
   openTime     String?  @db.VarChar(10)  // "10:00"
   closeTime    String?  @db.VarChar(10)  // "23:00"
