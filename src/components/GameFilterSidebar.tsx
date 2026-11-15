@@ -40,7 +40,7 @@ const GROUP_ICONS: Record<string, React.ReactNode> = {
 };
 
 /**
- * 게임 필터 사이드바 - 레드버튼 스타일
+ * 게임 필터 사이드바 - 매장 앱 스타일
  */
 export default function GameFilterSidebar({ filters, onChange, isOpen, onToggle }: Props) {
   const toggle = (group: keyof FilterState, value: string) => {

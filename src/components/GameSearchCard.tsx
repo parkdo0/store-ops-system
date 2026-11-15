@@ -9,7 +9,7 @@ interface Props {
 }
 
 /**
- * 게임 검색 결과 카드 - 실제 레드버튼 앱 기준
+ * 게임 검색 결과 카드 - 참고한 매장 앱 기준
  * 가로형: 좌측 썸네일 | 중앙 설명+해시태그 | 우측 스펙 테이블
  */
 export default function GameSearchCard({ game, index = 0 }: Props) {

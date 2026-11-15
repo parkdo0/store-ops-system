@@ -31,7 +31,7 @@ interface SessionPayload extends JWTPayload {
 // 상수
 // ──────────────────────────────────────
 
-const COOKIE_NAME = "rb-session";
+const COOKIE_NAME = "store-session";
 // 비밀값은 환경변수로만 받는다. 없으면 세션을 만들거나 검증하지 않고 멈춘다(공개 저장소라 기본값을 두지 않음).
 function getSecret(): Uint8Array {
   const secret = process.env.SESSION_SECRET;

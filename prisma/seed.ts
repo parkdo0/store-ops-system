@@ -45,28 +45,28 @@ async function main() {
     prisma.store.create({
       data: {
         id: 1, name: "수원점", address: "경기도 수원시 팔달구 인계로 123",
-        phone: "031-123-4567", wifiId: "redbutton", wifiPw: "red2563799",
+        phone: "031-123-4567", wifiId: "store-wifi", wifiPw: "demo-wifi-1",
         openTime: "10:00", closeTime: "23:00", storeCode: "SW", isActive: true,
       },
     }),
     prisma.store.create({
       data: {
         id: 2, name: "강남점", address: "서울특별시 강남구 테헤란로 456",
-        phone: "02-234-5678", wifiId: "redbutton", wifiPw: "red1234567",
+        phone: "02-234-5678", wifiId: "store-wifi", wifiPw: "demo-wifi-2",
         openTime: "10:00", closeTime: "24:00", storeCode: "GN", isActive: true,
       },
     }),
     prisma.store.create({
       data: {
         id: 3, name: "홍대점", address: "서울특별시 마포구 와우산로 789",
-        phone: "02-345-6789", wifiId: "redbutton", wifiPw: "red9876543",
+        phone: "02-345-6789", wifiId: "store-wifi", wifiPw: "demo-wifi-3",
         openTime: "11:00", closeTime: "24:00", storeCode: "HD", isActive: true,
       },
     }),
     prisma.store.create({
       data: {
         id: 4, name: "부산서면점", address: "부산광역시 부산진구 서면로 321",
-        phone: "051-456-7890", wifiId: "redbutton", wifiPw: "red5555555",
+        phone: "051-456-7890", wifiId: "store-wifi", wifiPw: "demo-wifi-4",
         openTime: "10:00", closeTime: "23:00", storeCode: "BS", isActive: false,
       },
     }),
@@ -82,11 +82,11 @@ async function main() {
   const staffPw = await bcrypt.hash("staff1234", 10);
   await prisma.adminUser.createMany({
     data: [
-      { id: 1, loginId: "hq", email: "admin@redbutton.co.kr", password: adminPw, name: "김본사", role: "HQ_ADMIN", storeId: null, isActive: true },
-      { id: 2, loginId: "suwon", email: "suwon@redbutton.co.kr", password: storePw, name: "이수원", role: "STORE_MANAGER", storeId: 1, isActive: true },
-      { id: 3, loginId: "gangnam", email: "gangnam@redbutton.co.kr", password: storePw, name: "박강남", role: "STORE_MANAGER", storeId: 2, isActive: true },
-      { id: 4, loginId: "hongdae", email: "hongdae@redbutton.co.kr", password: storePw, name: "최홍대", role: "STORE_MANAGER", storeId: 3, isActive: true },
-      { id: 5, loginId: "staff1", email: "staff1@redbutton.co.kr", password: staffPw, name: "정직원", role: "STORE_STAFF", storeId: 1, isActive: true },
+      { id: 1, loginId: "hq", email: "admin@example.com", password: adminPw, name: "김본사", role: "HQ_ADMIN", storeId: null, isActive: true },
+      { id: 2, loginId: "suwon", email: "suwon@example.com", password: storePw, name: "이수원", role: "STORE_MANAGER", storeId: 1, isActive: true },
+      { id: 3, loginId: "gangnam", email: "gangnam@example.com", password: storePw, name: "박강남", role: "STORE_MANAGER", storeId: 2, isActive: true },
+      { id: 4, loginId: "hongdae", email: "hongdae@example.com", password: storePw, name: "최홍대", role: "STORE_MANAGER", storeId: 3, isActive: true },
+      { id: 5, loginId: "staff1", email: "staff1@example.com", password: staffPw, name: "정직원", role: "STORE_STAFF", storeId: 1, isActive: true },
     ],
   });
   console.log("  5 admin users created (hq/admin1234, suwon/store1234, gangnam/store1234, hongdae/store1234, staff1/staff1234)");
@@ -239,7 +239,7 @@ async function main() {
     { id: 12, categoryName: "음료", name: "자몽에이드", description: "", imageUrl: "/images/menu/grapefruit.jpg", basePrice: 4500, isNew: false, isBest: false, optionGroups: [] },
     { id: 13, categoryName: "벌칙메뉴", name: "데스 초콜릿", description: "매운맛 초콜릿 러시안 룰렛", imageUrl: "/images/menu/death-choco.jpg", basePrice: 3000, isNew: false, isBest: true, optionGroups: [] },
     { id: 14, categoryName: "벌칙메뉴", name: "벌칙 젤리", description: "달콤할까 쓸까? 복불복 젤리", imageUrl: "/images/menu/penalty-jelly.jpg", basePrice: 2500, isNew: false, isBest: false, optionGroups: [] },
-    { id: 15, categoryName: "MD상품", name: "레드버튼 텀블러", description: "레드버튼 로고 텀블러", imageUrl: "/images/menu/tumbler.jpg", basePrice: 15000, isNew: false, isBest: false, optionGroups: [] },
+    { id: 15, categoryName: "MD상품", name: "매장 텀블러", description: "매장 로고 텀블러", imageUrl: "/images/menu/tumbler.jpg", basePrice: 15000, isNew: false, isBest: false, optionGroups: [] },
   ];
 
   for (const m of menusData) {
@@ -370,7 +370,7 @@ async function main() {
   console.log("Creating events...");
   await prisma.event.createMany({
     data: [
-      { id: 1, title: "LIAR & TROLL SHOW", subtitle: "레드버튼 오리지널 게임 세번째 시리즈 공개!", imageUrl: "/images/events/liehunt.jpg", order: 0, isActive: true, startDate: new Date("2026-01-15"), endDate: new Date("2026-02-28") },
+      { id: 1, title: "LIAR & TROLL SHOW", subtitle: "오리지널 게임 세번째 시리즈 공개!", imageUrl: "/images/events/liehunt.jpg", order: 0, isActive: true, startDate: new Date("2026-01-15"), endDate: new Date("2026-02-28") },
       { id: 2, title: "Feel the NEW Tasty Rush!", subtitle: "새로운 맛의 짜릿한 순간을 느껴봐!", imageUrl: "/images/events/tasty-rush.jpg", order: 1, isActive: true, startDate: new Date("2026-02-01"), endDate: new Date("2026-02-28") },
       { id: 3, title: "발렌타인 커플 이벤트", subtitle: "커플 보드게임 추천 + 음료 할인", imageUrl: "/images/events/valentine.jpg", order: 2, isActive: true, startDate: new Date("2026-02-10"), endDate: new Date("2026-02-18") },
       { id: 4, title: "설날 특별 이벤트", subtitle: "가족과 함께하는 보드게임", imageUrl: "/images/events/newyear.jpg", order: 3, isActive: false, startDate: new Date("2026-01-28"), endDate: new Date("2026-01-30") },
@@ -443,16 +443,16 @@ async function main() {
   console.log("Creating chat messages...");
   const chatSeeds = [
     { tableNo: "31", messages: [
-      { sender: "STORE", text: "안녕하세요, 레드버튼 수원점입니다!\n즐거운 시간 보내시기 바라요.\n<wifi 정보>\nID: redbutton\nPW: red2563799", minutesAgo: 9 },
+      { sender: "STORE", text: "안녕하세요, 수원점입니다!\n즐거운 시간 보내시기 바라요.\n<wifi 정보>\nID: store-wifi\nPW: demo-wifi-1", minutesAgo: 9 },
       { sender: "CUSTOMER", text: "화장실 어디에요?", minutesAgo: 2 },
     ]},
     { tableNo: "15", messages: [
-      { sender: "STORE", text: "안녕하세요, 레드버튼 수원점입니다!\n즐거운 시간 보내시기 바라요.\n<wifi 정보>\nID: redbutton\nPW: red2563799", minutesAgo: 12 },
+      { sender: "STORE", text: "안녕하세요, 수원점입니다!\n즐거운 시간 보내시기 바라요.\n<wifi 정보>\nID: store-wifi\nPW: demo-wifi-1", minutesAgo: 12 },
       { sender: "CUSTOMER", text: "주문한 음식 언제 나와요?", minutesAgo: 6 },
     ]},
     { tableNo: "7", messages: [
-      { sender: "STORE", text: "안녕하세요, 레드버튼 수원점입니다!\n즐거운 시간 보내시기 바라요.\n<wifi 정보>\nID: redbutton\nPW: red2563799", minutesAgo: 12 },
-      { sender: "CUSTOMER", text: "안녕하세요, 레드버튼은 수원점...", minutesAgo: 10 },
+      { sender: "STORE", text: "안녕하세요, 수원점입니다!\n즐거운 시간 보내시기 바라요.\n<wifi 정보>\nID: store-wifi\nPW: demo-wifi-1", minutesAgo: 12 },
+      { sender: "CUSTOMER", text: "안녕하세요, 여기 수원점이죠?", minutesAgo: 10 },
     ]},
     { tableNo: "22", messages: [
       { sender: "CUSTOMER", text: "가장 게임 있나요?", minutesAgo: 8 },
@@ -481,7 +481,7 @@ async function main() {
   console.log("\n10. Creating coupons...");
   const couponsData = [
     { code: "WELCOME", name: "신규 회원 1,000원 할인", discountAmount: 1000, minOrderAmount: 5000, maxUses: 1000 },
-    { code: "REDBUTTON", name: "레드버튼 출석 쿠폰 500원", discountAmount: 500, minOrderAmount: 0, maxUses: null },
+    { code: "WELCOME", name: "출석 쿠폰 500원", discountAmount: 500, minOrderAmount: 0, maxUses: null },
     { code: "BOARDGAME", name: "보드게임 데이 2,000원 할인", discountAmount: 2000, minOrderAmount: 10000, maxUses: 200, startDate: new Date("2025-01-01"), endDate: new Date("2025-12-31") },
   ];
   for (const c of couponsData) {

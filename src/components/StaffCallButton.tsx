@@ -5,7 +5,7 @@ import { useToast } from "@/components/ToastProvider";
 import { useSession } from "@/components/SessionProvider";
 
 /**
- * 직원 호출 버튼 - 레드버튼 스타일
+ * 직원 호출 버튼 - 매장 앱 스타일
  * 채팅 API로 자동 메시지 전송
  */
 export default function StaffCallButton() {

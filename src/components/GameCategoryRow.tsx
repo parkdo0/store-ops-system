@@ -9,7 +9,7 @@ interface Props {
 
 /**
  * 넷플릭스 스타일 카테고리별 가로 스크롤 행
- * 실제 레드버튼 앱: 감성적인 카테고리 제목 (2줄 + 이모지)
+ * 참고한 매장 앱: 감성적인 카테고리 제목 (2줄 + 이모지)
  */
 export default function GameCategoryRow({ category }: Props) {
   return (

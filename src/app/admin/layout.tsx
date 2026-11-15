@@ -52,10 +52,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         {/* 로고 */}
         <div className="flex items-center gap-2 border-b border-gray-200 px-5 py-4">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-600">
-            <span className="text-[10px] font-extrabold text-white">RB</span>
+            <span className="text-[10px] font-extrabold text-white">SO</span>
           </div>
           <div>
-            <p className="text-sm font-bold text-gray-900">Red Button</p>
+            <p className="text-sm font-bold text-gray-900">매장 운영 시스템</p>
             <p className="text-[10px] text-gray-400">Admin Console</p>
           </div>
         </div>

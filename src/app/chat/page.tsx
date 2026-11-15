@@ -10,7 +10,7 @@ export default async function ChatPage() {
     getChatMessages(storeId, tableNo),
   ]);
 
-  const storeName = `레드버튼 ${store?.name ?? ""}`;
+  const storeName = `${store?.name ?? ""}`;
 
   const initialMessages: ChatMsg[] = dbMessages.map((m) => ({
     id: m.id,

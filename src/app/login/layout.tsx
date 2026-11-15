@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "로그인 | 레드버튼",
+  title: "로그인 | 매장 운영 시스템",
 };
 
 /**

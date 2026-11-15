@@ -19,7 +19,7 @@ const BADGE_CLASS: Record<string, string> = {
 };
 
 /**
- * 게임 카드 - 실제 레드버튼 앱 기준
+ * 게임 카드 - 참고한 매장 앱 기준
  * 가로 스크롤용 카드: 썸네일 + 태그 + 난이도·인원 정보
  */
 export default function GameCard({ game, index = 0 }: Props) {

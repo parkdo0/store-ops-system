@@ -1,5 +1,5 @@
 /**
- * 주문 내역 로딩 스켈레톤 - 레드버튼 스타일
+ * 주문 내역 로딩 스켈레톤 - 매장 앱 스타일
  */
 export default function OrdersLoading() {
   return (

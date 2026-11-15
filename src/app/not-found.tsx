@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * 404 Not Found - 레드버튼 스타일
+ * 404 Not Found - 매장 앱 스타일
  */
 export default function NotFound() {
   return (

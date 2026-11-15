@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * 전역 에러 바운더리 - 레드버튼 스타일
+ * 전역 에러 바운더리 - 매장 앱 스타일
  */
 export default function ErrorPage({
   error,

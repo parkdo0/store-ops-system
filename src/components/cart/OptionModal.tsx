@@ -11,7 +11,7 @@ interface Props {
 }
 
 /**
- * 메뉴 옵션 선택 모달 - 라이트 테마 (실제 레드버튼 앱 기준)
+ * 메뉴 옵션 선택 모달 - 라이트 테마 (참고한 매장 앱 기준)
  * 주문 페이지가 흰색 배경이므로 모달도 라이트
  */
 export default function OptionModal({ menu, onClose }: Props) {

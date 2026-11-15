@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "레드버튼 | 보드게임 카페",
-  description: "레드버튼 보드게임 카페 태블릿 앱 - In Joy, To-gather!",
+  title: "매장 운영 시스템 | 보드게임 카페",
+  description: "보드게임 카페 매장 운영 시스템 데모 - 고객 태블릿, 매장 관리, 본사 관리",
   icons: { icon: "/favicon.ico" },
 };
 
@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 /**
- * 루트 레이아웃 - 레드버튼 태블릿 앱
+ * 루트 레이아웃 - 매장 운영 시스템 태블릿 앱
  * CartProvider 루트 배치 → 페이지 이동 시 장바구니 유지
  */
 export default function RootLayout({

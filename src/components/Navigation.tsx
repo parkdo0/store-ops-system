@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { useCart } from "@/components/cart/CartProvider";
 
 /**
- * 사이드바 네비게이션 - 실제 레드버튼 앱 기준
- * 8개 메뉴 + RBTN 로고 + 쿠폰 하단 고정
+ * 사이드바 네비게이션 - 참고한 매장 앱 기준
+ * 8개 메뉴 + 로고 + 쿠폰 하단 고정
  * 로그인/관리자 페이지에서는 숨김
  */
 
@@ -112,11 +112,11 @@ export default function Navigation() {
 
   return (
     <nav className="flex w-[80px] flex-col items-center justify-between bg-[#111015] py-4 border-r border-[#222]">
-      {/* 상단: RBTN 로고 */}
+      {/* 상단: 로고 */}
       <div className="flex flex-col items-center">
         <Link href="/" className="group">
           <div className="flex h-[38px] w-[54px] items-center justify-center rounded-lg bg-red-primary transition-transform group-hover:scale-105">
-            <span className="text-[15px] font-extrabold tracking-wider text-white">RBTN</span>
+            <span className="text-[15px] font-extrabold tracking-wider text-white">STORE</span>
           </div>
         </Link>
       </div>

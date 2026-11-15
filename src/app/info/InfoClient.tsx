@@ -77,7 +77,7 @@ export default function InfoClient({ storeName, tableNo, wifiId, wifiPw, checkIn
           <div className="mb-3"><IconGuide /></div>
           <h3 className="text-lg font-bold text-text-primary">이용 안내</h3>
           <p className="mt-2 text-xs text-text-muted leading-relaxed">
-            레드버튼 이용 방법을<br />설명해 드립니다
+            매장 이용 방법을<br />설명해 드립니다
           </p>
           <div className="mt-auto pt-4">
             <span className="inline-flex rounded-xl bg-bg-elevated px-4 py-2 text-xs font-semibold text-text-secondary">
@@ -94,7 +94,7 @@ export default function InfoClient({ storeName, tableNo, wifiId, wifiPw, checkIn
           <div className="mb-3"><IconCustomerFeedback /></div>
           <h3 className="text-lg font-bold text-text-primary">고객 의견</h3>
           <p className="mt-2 text-xs text-text-muted leading-relaxed">
-            레드버튼 본사로 여러분의<br />제안이나 의견을 보내주세요
+            본사로 여러분의<br />제안이나 의견을 보내주세요
           </p>
           <div className="mt-auto pt-4">
             <span className="inline-flex rounded-xl bg-red-primary/10 px-4 py-2 text-xs font-semibold text-red-primary">
@@ -144,7 +144,7 @@ export default function InfoClient({ storeName, tableNo, wifiId, wifiPw, checkIn
         <Modal title="고객 의견" onClose={() => setShowFeedback(false)}>
           <div className="flex flex-col gap-4">
             <p className="text-sm text-text-muted">
-              레드버튼 본사로 전달됩니다. 매장 관련 의견을 자유롭게 작성해 주세요.
+              본사로 전달됩니다. 매장 관련 의견을 자유롭게 작성해 주세요.
             </p>
             <textarea
               value={feedback}

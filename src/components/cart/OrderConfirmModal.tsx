@@ -12,7 +12,7 @@ interface Props {
 }
 
 /**
- * 주문 확인 모달 - 라이트 테마 (실제 레드버튼 앱 기준)
+ * 주문 확인 모달 - 라이트 테마 (참고한 매장 앱 기준)
  */
 export default function OrderConfirmModal({
   items,

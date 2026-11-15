@@ -58,7 +58,7 @@ const PUNISHMENTS = [
 ];
 
 /**
- * 게임 키트 - 실제 레드버튼 앱 기준
+ * 게임 키트 - 참고한 매장 앱 기준
  * 벌칙 룰렛 / 선 정하기 / 팀 정하기 3개 카드
  */
 export default function KitPage() {

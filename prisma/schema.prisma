@@ -56,7 +56,7 @@ model Store {
   address      String?  @db.VarChar(255)
   phone        String?  @db.VarChar(20)
   wifiId       String?  @db.VarChar(50)  // "storeops"
-  wifiPw       String?  @db.VarChar(50)  // "red2563799"
+  wifiPw       String?  @db.VarChar(50)  // "demo-wifi-1"
   openTime     String?  @db.VarChar(10)  // "10:00"
   closeTime    String?  @db.VarChar(10)  // "23:00"
   storeCode    String   @db.VarChar(5)   @default("") // 매장 접두사 ("SW", "GN", "HD")

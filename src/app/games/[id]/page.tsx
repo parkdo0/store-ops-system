@@ -28,7 +28,7 @@ function getGenres(game: Game): string[] {
 }
 
 /**
- * 게임 상세 페이지 - 레드버튼 스타일
+ * 게임 상세 페이지 - 매장 앱 스타일
  * 유튜브 영상 + 게임 정보 + 관련 게임 추천
  */
 export default async function GameDetailPage({ params }: Props) {

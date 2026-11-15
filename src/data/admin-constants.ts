@@ -20,7 +20,7 @@ export interface AdminUser {
 /** 임시 관리자 정보 (인증 구현 전) */
 export const CURRENT_ADMIN: AdminUser = {
   id: 1,
-  email: "admin@redbutton.co.kr",
+  email: "admin@example.com",
   name: "김본사",
   role: "HQ_ADMIN",
   storeId: null,
@@ -29,7 +29,7 @@ export const CURRENT_ADMIN: AdminUser = {
 
 export const CURRENT_STORE_ADMIN: AdminUser = {
   id: 2,
-  email: "suwon@redbutton.co.kr",
+  email: "suwon@example.com",
   name: "이수원",
   role: "STORE_MANAGER",
   storeId: 1,

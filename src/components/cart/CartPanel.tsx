@@ -12,7 +12,7 @@ interface Props {
 }
 
 /**
- * 장바구니 슬라이드 패널 - 레드버튼 스타일
+ * 장바구니 슬라이드 패널 - 매장 앱 스타일
  */
 export default function CartPanel({ onClose }: Props) {
   const { items, totalPrice, totalCount, updateQuantity, removeItem, clearCart } = useCart();

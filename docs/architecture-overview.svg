@@ -24,7 +24,7 @@
   <rect width="960" height="680" rx="16" fill="#fafafa"/>
 
   <!-- Title -->
-  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#111">레드버튼 시스템 아키텍처</text>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#111">매장 운영 시스템 아키텍처</text>
 
   <!-- Next.js App boundary -->
   <rect x="30" y="52" width="900" height="616" rx="12" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="8,4"/>

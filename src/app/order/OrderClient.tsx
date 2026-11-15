@@ -8,7 +8,7 @@ import { useCart } from "@/components/cart/CartProvider";
 import { useToast } from "@/components/ToastProvider";
 
 /**
- * F&B 주문 페이지 - 실제 레드버튼 앱 기준
+ * F&B 주문 페이지 - 참고한 매장 앱 기준
  * 라이트(흰색) 테마 (게임 페이지와 다름)
  * 텍스트 탭 + 빨간 밑줄 (pill 아님)
  * 프로모션 배너

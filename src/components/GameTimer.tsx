@@ -7,7 +7,7 @@ interface Props {
 }
 
 /**
- * 게임 타이머 - 레드버튼 스타일
+ * 게임 타이머 - 매장 앱 스타일
  * 이용 시간 측정 (카운트업) + 일시정지/리셋
  */
 export default function GameTimer({ compact = false }: Props) {

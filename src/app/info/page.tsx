@@ -22,8 +22,8 @@ export default async function InfoPage() {
     <InfoClient
       storeName={store?.name ?? ""}
       tableNo={tableNo}
-      wifiId={store?.wifiId ?? "redbutton"}
-      wifiPw={store?.wifiPw ?? "red2563799"}
+      wifiId={store?.wifiId ?? "store-wifi"}
+      wifiPw={store?.wifiPw ?? "demo-wifi-1"}
       checkInTime={checkInTime}
       elapsedMin={elapsed}
     />

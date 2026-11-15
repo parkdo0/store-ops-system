@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * 유튜브 영상 플레이어 - 레드버튼 스타일
+ * 유튜브 영상 플레이어 - 매장 앱 스타일
  */
 interface Props {
   url: string;

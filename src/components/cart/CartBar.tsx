@@ -8,7 +8,7 @@ interface Props {
 }
 
 /**
- * 장바구니 플로팅 바 - 레드버튼 스타일
+ * 장바구니 플로팅 바 - 매장 앱 스타일
  */
 export default function CartBar({ onOpenCart }: Props) {
   const { totalCount, totalPrice } = useCart();

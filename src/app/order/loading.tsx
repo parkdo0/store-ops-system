@@ -1,7 +1,7 @@
 import { MenuCardSkeleton } from "@/components/Skeleton";
 
 /**
- * 주문 페이지 로딩 스켈레톤 - 레드버튼 스타일
+ * 주문 페이지 로딩 스켈레톤 - 매장 앱 스타일
  */
 export default function OrderLoading() {
   return (

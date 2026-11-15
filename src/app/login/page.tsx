@@ -24,9 +24,9 @@ export default function LoginPage() {
       {/* 로고 */}
       <div className="mb-8 text-center">
         <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-600 shadow-lg shadow-red-600/30">
-          <span className="text-lg font-extrabold text-white tracking-tight">RB</span>
+          <span className="text-lg font-extrabold text-white tracking-tight">SO</span>
         </div>
-        <h1 className="mt-4 text-2xl font-extrabold text-white">Red Button</h1>
+        <h1 className="mt-4 text-2xl font-extrabold text-white">매장 운영 시스템</h1>
         <p className="mt-1 text-sm text-gray-400">보드게임 카페 관리 시스템</p>
       </div>
 
@@ -62,7 +62,7 @@ export default function LoginPage() {
 
       {/* 하단 안내 */}
       <p className="mt-6 text-center text-xs text-gray-500">
-        © 2025 Red Button. All rights reserved.
+        © 2026 매장 운영 시스템 데모
       </p>
     </div>
   );
